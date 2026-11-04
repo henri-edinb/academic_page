@@ -206,10 +206,10 @@
                             <circle cx="73" cy="40" r="11" class="fill-brand-500/20 stroke-brand-500" stroke-width="1.5"></circle>
                             <circle cx="73" cy="40" r="4.5" class="fill-brand-500"></circle>
                             <circle cx="28" cy="22" r="4" class="fill-cyan-400">
-                                <animateMotion dur="3s" repeatCount="indefinite" path="M0 0 C17 -10 32 6 45 18"></animateMotion>
+                                <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.42 0 1 1" path="M0 0 C17 -10 32 6 45 18"></animateMotion>
                             </circle>
                             <circle cx="108" cy="58" r="4" class="fill-cyan-400">
-                                <animateMotion dur="3s" repeatCount="indefinite" path="M0 0 C-13 12 -23 -6 -35 -18"></animateMotion>
+                                <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.42 0 1 1" path="M0 0 C-13 12 -23 -6 -35 -18"></animateMotion>
                             </circle>
                             <text x="70" y="20" text-anchor="middle" class="fill-slate-800 dark:fill-white" font-size="14" font-weight="700">dynamics</text>
                             <text x="70" y="68" text-anchor="middle" class="fill-slate-500 dark:fill-slate-300" font-size="12">propagate y → y*</text>
@@ -220,7 +220,7 @@
                             <rect width="105" height="70" rx="14" class="fill-slate-100 dark:fill-slate-800 stroke-slate-300 dark:stroke-slate-600" stroke-width="2"></rect>
                             <circle cx="52" cy="35" r="13" class="fill-brand-500/20 stroke-brand-500" stroke-width="1.5"></circle>
                             <circle cx="52" cy="35" r="5" class="fill-brand-500"></circle>
-                            <text x="52" y="91" text-anchor="middle" class="fill-slate-600 dark:fill-slate-300" font-size="13" font-weight="600">predicted target y*</text>
+                            <text x="52" y="91" text-anchor="middle" class="fill-slate-600 dark:fill-slate-300" font-size="13" font-weight="600">learn target y*</text>
                         </g>
 
                         <!-- Prior cue -->
@@ -430,13 +430,13 @@
                             Step 1: Input Projection (Wx)
                         </span>
                         <span id="badgeStep2" class="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700 transition-all">
-                            Step 2: Stable State (y*) & Plasticity
+                            Step 2: Infer Stable State (y*)
                         </span>
                         <span id="badgeStep3" class="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700 transition-all">
-                            Step 3: Local Plasticity (ΔM=yyᵀ)
+                            Step 3: Hebbian Plasticity (ΔM=yyᵀ)
                         </span>
                         <span id="badgeStep4" class="text-[11px] font-mono font-bold px-3 py-1 rounded-full bg-slate-800 text-slate-400 border border-slate-700 transition-all">
-                            Step 4: Gradient Descent (ΔW=Wx-y)
+                            Step 4: Gradient Descent (ΔW=Wx-y*)
                         </span>
                     </div>
                 </div>
