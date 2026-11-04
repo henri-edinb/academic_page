@@ -141,8 +141,27 @@
                     </p>
                 </div>
 
+                <!-- Contact & Social Icons -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                    <a href="mailto:henriquereisaguiar96@gmail.com" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
+                        <i class="fa-regular fa-envelope mr-1.5"></i> Email
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=b7exmxgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
+                        <i class="fa-solid fa-graduation-cap mr-1.5"></i> Google Scholar
+                    </a>
+                    <a href="https://www.linkedin.com/in/henrique-reis-aguiar-a7984812a/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
+                        <i class="fa-brands fa-linkedin mr-1.5"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/henri-edinb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
+                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
+                    </a>
+                    <a href="https://drive.google.com/file/d/1cjYcr_-CbttVXvnPS9K2Vz-0mHk4h_Wu/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium border border-brand-500 text-brand-600 dark:text-brand-400 hover:bg-brand-500 hover:text-white transition-all">
+                        <i class="fa-solid fa-file-arrow-down mr-1.5"></i> Curriculum Vitae
+                    </a>
+                </div>
+
                 <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base max-w-2xl">
-                    Hi! I'm a junior research in computational neuroscience, working at the intersection of neuroscience and artificial intelligence. My research focuses on understanding <strong>how biological neural circuits implement self-supervised learning objectives</strong> and build predictive models of the world. A main hypothesis thourhgout my research is that the brain is optimizing the predictive coding objective and leveraging intrisic dynamical motifs to enforce prior distributions on the latent space.
+                    Hi! I'm a junior researcher, working at the intersection of neuroscience and artificial intelligence. My research focuses on understanding how <strong>biological neural circuits</strong> can implement <strong>self-supervised learning</strong> objectives and build predictive models of the world. A broad hypothesis I have been pursuing is that the brain is optimizing the <strong>predictive coding</strong> objective and leveraging intrisic dynamical motifs to enforce prior distributions on the latent space.
                 </p>
 
                 <!-- Latent-variable model illustration -->
@@ -207,40 +226,22 @@
                     </svg>
                 </figure>
 
-                <!-- Key Focus Pills -->
+                <!-- Key Focus Pills
                 <div class="flex flex-wrap gap-2 justify-center md:justify-start pt-1">
-                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    <button type="button" onclick="openSubjectModal('neural-dynamics')" aria-haspopup="dialog" class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <i class="fa-solid fa-brain text-brand-500 mr-1"></i> Neural Dynamics
-                    </span>
-                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    </button>
+                    <button type="button" onclick="openSubjectModal('predictive-coding')" aria-haspopup="dialog" class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <i class="fa-solid fa-shuffle text-brand-500 mr-1"></i> Predictive Coding
-                    </span>
-                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    </button>
+                    <button type="button" onclick="openSubjectModal('sequence-learning')" aria-haspopup="dialog" class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <i class="fa-solid fa-code-branch text-brand-500 mr-1"></i> Sequence Learning
-                    </span>
-                    <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                    </button>
+                    <button type="button" onclick="openSubjectModal('asynchronous-plasticity')" aria-haspopup="dialog" class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:text-brand-600 dark:hover:text-brand-400 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
                         <i class="fa-solid fa-bolt text-brand-500 mr-1"></i> Asynchronous Plasticity
-                    </span>
+                    </button>
                 </div>
-
-                <!-- Contact & Social Icons -->
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-3">
-                    <a href="mailto:henriquereisaguiar96@gmail.com" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
-                        <i class="fa-regular fa-envelope mr-1.5"></i> Email
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=b7exmxgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
-                        <i class="fa-solid fa-graduation-cap mr-1.5"></i> Google Scholar
-                    </a>
-                    <a href="https://www.linkedin.com/in/henrique-reis-aguiar-a7984812a/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
-                        <i class="fa-brands fa-linkedin mr-1.5"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/henri-edinb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200/80 dark:bg-slate-800 hover:bg-brand-600 hover:text-white dark:hover:bg-brand-600 transition-all">
-                        <i class="fa-brands fa-github mr-1.5"></i> GitHub
-                    </a>
-                    <a href="https://drive.google.com/file/d/1cjYcr_-CbttVXvnPS9K2Vz-0mHk4h_Wu/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-medium border border-brand-500 text-brand-600 dark:text-brand-400 hover:bg-brand-500 hover:text-white transition-all">
-                        <i class="fa-solid fa-file-arrow-down mr-1.5"></i> Curriculum Vitae
-                    </a>
-                </div>
+                -->
             </div>
         </section>
 
@@ -610,6 +611,16 @@
         </div>
     </div>
 
+    <!-- Research Subject Modal -->
+    <div id="subjectModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm transition-opacity" role="dialog" aria-modal="true" aria-labelledby="subjectModalTitle">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeSubjectModal()" aria-label="Close subject overview" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-lg p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="subjectModalContent"></div>
+        </div>
+    </div>
+
     <!-- Application Scripts -->
     <script>
         // Theme Toggle Functionality
@@ -694,6 +705,49 @@
                 abstract: 'Demonstrated that coupling lateral inhibition with slow recurrent excitation enables local circuits to disentangle spatio-temporal factors from natural video streams, giving rise to direction selectivity and sequence completion.'
             }
         ];
+
+        const researchSubjects = {
+            'neural-dynamics': {
+                title: 'Neural Dynamics',
+                icon: 'fa-brain',
+                description: 'Neural dynamics studies how patterns of activity evolve through time in biological circuits. It connects single-neuron mechanisms, recurrent connectivity, and population-level computation to explain stability, oscillations, attractors, and decision-making.',
+                papers: [
+                    { title: 'A quantitative description of membrane current and its application to conduction and excitation in nerve', authors: 'Hodgkin & Huxley (1952)', venue: 'The Journal of Physiology', url: 'https://doi.org/10.1113/jphysiol.1952.sp004764' },
+                    { title: 'Excitatory and inhibitory interactions in locally coupled neural populations', authors: 'Wilson & Cowan (1972)', venue: 'Biophysical Journal', url: 'https://doi.org/10.1016/S0006-3495(72)86068-5' },
+                    { title: 'Simple Model of Spiking Neurons', authors: 'Izhikevich (2003)', venue: 'IEEE Transactions on Neural Networks', url: 'https://doi.org/10.1109/TNN.2003.820440' }
+                ]
+            },
+            'predictive-coding': {
+                title: 'Predictive Coding',
+                icon: 'fa-shuffle',
+                description: 'Predictive coding proposes that the brain continuously predicts incoming sensory signals and updates its internal model using the resulting prediction errors. The framework links efficient representation, hierarchical inference, and learning.',
+                papers: [
+                    { title: 'Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects', authors: 'Rao & Ballard (1999)', venue: 'Nature Neuroscience', url: 'https://doi.org/10.1038/4580' },
+                    { title: 'A theory of cortical responses', authors: 'Friston (2005)', venue: 'Philosophical Transactions of the Royal Society B', url: 'https://doi.org/10.1098/rstb.2005.1622' },
+                    { title: 'Canonical microcircuits for predictive coding', authors: 'Bastos et al. (2012)', venue: 'Neuron', url: 'https://doi.org/10.1016/j.neuron.2012.10.038' }
+                ]
+            },
+            'sequence-learning': {
+                title: 'Sequence Learning',
+                icon: 'fa-code-branch',
+                description: 'Sequence learning concerns how neural systems represent order, context, and temporal dependencies. It provides a bridge between recurrent dynamics, memory, prediction, and behavior unfolding over time.',
+                papers: [
+                    { title: 'Finding Structure in Time', authors: 'Elman (1990)', venue: 'Cognitive Science', url: 'https://doi.org/10.1207/s15516709cog1402_1' },
+                    { title: 'Long Short-Term Memory', authors: 'Hochreiter & Schmidhuber (1997)', venue: 'Neural Computation', url: 'https://doi.org/10.1162/neco.1997.9.8.1735' },
+                    { title: 'A Neural Probabilistic Language Model', authors: 'Bengio et al. (2003)', venue: 'Journal of Machine Learning Research', url: 'https://www.jmlr.org/papers/v3/bengio03a.html' }
+                ]
+            },
+            'asynchronous-plasticity': {
+                title: 'Asynchronous Plasticity',
+                icon: 'fa-bolt',
+                description: 'Asynchronous plasticity explores how synapses can adapt continuously from local signals without waiting for a network to settle into a steady state. This perspective is useful for online learning, temporal data, and biologically plausible computation.',
+                papers: [
+                    { title: 'The Organization of Behavior', authors: 'Hebb (1949)', venue: 'Classic monograph on activity-dependent plasticity', url: 'https://doi.org/10.4324/9781410612403' },
+                    { title: 'Theory for the development of neuron selectivity: orientation specificity and binocular interaction in visual cortex', authors: 'Bienenstock, Cooper & Munro (1982)', venue: 'Journal of Neuroscience', url: 'https://doi.org/10.1523/JNEUROSCI.02-01-00032.1982' },
+                    { title: 'Synaptic plasticity and memory consolidation', authors: 'Fusi, Drew & Abbott (2005)', venue: 'Neuron', url: 'https://doi.org/10.1016/j.neuron.2005.09.026' }
+                ]
+            }
+        };
 
         const mathRenderOptions = {
             delimiters: [
@@ -782,6 +836,60 @@
                     renderPublications('all', e.target.value);
                 });
             }
+        }
+
+        function openSubjectModal(subjectId) {
+            const subject = researchSubjects[subjectId];
+            const modal = document.getElementById('subjectModal');
+            const content = document.getElementById('subjectModalContent');
+            if (!subject || !modal || !content) return;
+
+            content.innerHTML = `
+                <div class="space-y-5 pr-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center text-brand-600 dark:text-brand-400">
+                            <i class="fa-solid ${subject.icon} text-lg"></i>
+                        </div>
+                        <h2 id="subjectModalTitle" class="text-xl font-bold text-slate-900 dark:text-white">${subject.title}</h2>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">${subject.description}</p>
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Classic papers</h3>
+                        <ul class="space-y-3">
+                            ${subject.papers.map(paper => `
+                                <li class="rounded-xl border border-slate-200 dark:border-slate-800 p-3">
+                                    <a href="${paper.url}" target="_blank" rel="noopener noreferrer" class="group block">
+                                        <span class="block text-sm font-semibold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">${paper.title} <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px] text-slate-400" aria-hidden="true"></i></span>
+                                        <span class="block text-xs text-brand-600 dark:text-brand-400 mt-1">${paper.authors}</span>
+                                        <span class="block text-xs text-slate-500 dark:text-slate-400 mt-0.5">${paper.venue}</span>
+                                    </a>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeSubjectModal() {
+            document.getElementById('subjectModal').classList.add('hidden');
+        }
+
+        function setupModalInteractions() {
+            if (document.body.dataset.modalInteractionsReady) return;
+            document.body.dataset.modalInteractionsReady = 'true';
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    closePaperModal();
+                    closeSubjectModal();
+                }
+            });
+
+            document.getElementById('subjectModal').addEventListener('click', (event) => {
+                if (event.target === event.currentTarget) closeSubjectModal();
+            });
         }
 
         function openPaperModal(pubId) {
@@ -1286,6 +1394,7 @@
             initTheme();
             renderPublications('all', '');
             setupSearch();
+            setupModalInteractions();
             renderMath(document.body);
             renderConsistencyManifoldEquation();
             initPipelineSim();
