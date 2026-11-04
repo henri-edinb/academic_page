@@ -167,8 +167,8 @@
                 <!-- Latent-variable model illustration -->
                 <figure class="mt-5 max-w-2xl rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/70 p-3 sm:p-4 shadow-sm text-left" aria-labelledby="latent-model-caption">
                     <svg viewBox="0 0 760 220" role="img" aria-labelledby="latent-model-title latent-model-description" class="w-full h-auto">
-                        <title id="latent-model-title">A latent variable model predicts future targets from encoded input</title>
-                        <desc id="latent-model-description">An input is encoded into a latent state, dynamics propagate that state forward, and the model predicts a target. A prior shapes the latent dynamics.</desc>
+                        <title id="latent-model-title">An encoder produces a latent state that is propagated by learned dynamics</title>
+                        <desc id="latent-model-description">The input is mapped once by an encoder into a latent representation y. Latent dynamics propagate y forward to produce a predicted latent representation y-hat. A prior shapes the latent dynamics; there is no decoder or output reconstruction.</desc>
                         <defs>
                             <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
                                 <path d="M0,0 L8,4 L0,8 Z" fill="currentColor"></path>
@@ -203,25 +203,42 @@
                         <!-- Latent dynamics -->
                         <g transform="translate(365 65)">
                             <rect width="140" height="80" rx="18" fill="url(#latentGlow)" class="stroke-cyan-500" stroke-width="2"></rect>
-                            <circle cx="28" cy="40" r="5" class="fill-brand-500"></circle>
-                            <circle cx="52" cy="30" r="4" class="fill-cyan-400"></circle>
-                            <circle cx="78" cy="48" r="5" class="fill-brand-500"></circle>
+                            <g fill="none" class="stroke-cyan-600 dark:stroke-cyan-300" stroke-width="1.5" stroke-linecap="round" opacity=".8">
+                                <path d="M18 22 C38 4 72 8 73 38"></path>
+                                <path d="M17 59 C42 78 72 67 73 42"></path>
+                                <path d="M35 10 C52 18 57 29 73 38"></path>
+                                <path d="M105 17 C91 25 86 31 76 39"></path>
+                                <path d="M108 62 C91 55 86 48 76 42"></path>
+                            </g>
+                            <circle cx="73" cy="40" r="12" class="fill-cyan-400/20 stroke-cyan-600 dark:stroke-cyan-300" stroke-width="1.5"></circle>
+                            <circle cx="73" cy="40" r="5" class="fill-brand-500"></circle>
                             <path d="M91 40 H118" class="stroke-cyan-600 dark:stroke-cyan-300" stroke-width="2" marker-end="url(#arrowhead)"></path>
                             <text x="70" y="20" text-anchor="middle" class="fill-slate-800 dark:fill-white" font-size="14" font-weight="700">dynamics</text>
-                            <text x="70" y="68" text-anchor="middle" class="fill-slate-500 dark:fill-slate-300" font-size="12">propagate y → ŷ</text>
+                            <text x="70" y="68" text-anchor="middle" class="fill-slate-500 dark:fill-slate-300" font-size="12">propagate y → y*</text>
                         </g>
 
-                        <!-- Predictive target -->
+                        <!-- Predicted latent representation -->
                         <g transform="translate(585 70)">
                             <rect width="105" height="70" rx="14" class="fill-slate-100 dark:fill-slate-800 stroke-slate-300 dark:stroke-slate-600" stroke-width="2"></rect>
-                            <path d="M18 51 C29 42 36 45 45 31 C54 18 62 32 84 19" fill="none" class="stroke-cyan-500" stroke-width="3"></path>
-                            <text x="52" y="91" text-anchor="middle" class="fill-slate-600 dark:fill-slate-300" font-size="13" font-weight="600">predictive target ŷ</text>
+                            <g class="stroke-cyan-500 dark:stroke-cyan-300" stroke-width="1.5" opacity=".8">
+                                <path d="M24 28 L48 20 L76 32 L88 49"></path>
+                                <path d="M24 28 L48 50 L76 32"></path>
+                                <path d="M48 20 L48 50"></path>
+                            </g>
+                            <g class="fill-cyan-500">
+                                <circle cx="24" cy="28" r="5"></circle>
+                                <circle cx="48" cy="20" r="5"></circle>
+                                <circle cx="76" cy="32" r="5"></circle>
+                                <circle cx="48" cy="50" r="5"></circle>
+                                <circle cx="88" cy="49" r="5"></circle>
+                            </g>
+                            <text x="52" y="91" text-anchor="middle" class="fill-slate-600 dark:fill-slate-300" font-size="13" font-weight="600">learn target y*</text>
                         </g>
 
                         <!-- Prior cue -->
                         <g transform="translate(365 175)">
                             <rect width="140" height="32" rx="16" class="fill-amber-50 dark:fill-amber-950/40 stroke-amber-400 dark:stroke-amber-500" stroke-width="2"></rect>
-                            <text x="70" y="21" text-anchor="middle" class="fill-amber-800 dark:fill-amber-300" font-size="12" font-weight="700">prior shapes y</text>
+                            <text x="70" y="21" text-anchor="middle" class="fill-amber-800 dark:fill-amber-300" font-size="12" font-weight="700">prior shapes y*</text>
                         </g>
                     </svg>
                 </figure>
