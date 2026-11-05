@@ -1392,7 +1392,12 @@
         }
 
         // Global Page Initialization
+        let pageInitialized = false;
+
         function initializePage() {
+            if (pageInitialized) return;
+            pageInitialized = true;
+
             initTheme();
             renderPublications('all', '');
             setupSearch();
